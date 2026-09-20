@@ -13,10 +13,10 @@ export const profile: Profile = {
   ],
   social: {
     // TODO: replace with your real contact details
-    email: "rohitdas.dev@gmail.com",
-    phone: "+91 98765 43210",
-    linkedin: "linkedin.com/in/rohitdas-dev",
-    github: "github.com/rohitdas-dev",
+    email: "dasrohit712000@gmail.com",
+    phone: "+91 70039 13661",
+    linkedin: "linkedin.com/in/rohit-das-0b91801aa",
+    github: "github.com/DASROHIT712000",
   },
   resumeUrl: "/resume.pdf",
 };
