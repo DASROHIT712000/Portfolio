@@ -13,3 +13,4 @@ export const SITE = {
   description:
     "WordPress Developer with 3+ years building custom themes, plugins, and full-stack web solutions with PHP and MySQL.",
 } as const;
+  
