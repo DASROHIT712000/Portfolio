@@ -8,9 +8,9 @@ import styles from "@/styles/navbar.module.css";
 import { cn } from "@/lib/utils";
 
 /**
- * Home page sections (hero/about/skills/resume/projects/contact) all live
- * on "/", so on-page links scroll-spy via IntersectionObserver. Dedicated
- * routes (/about, /projects, /contact) highlight based on the current path.
+ * All nav links point to sections on the home page ("/#about", etc).
+ * On the home page, clicking smooth-scrolls to the section. On any other
+ * route, Next.js navigates to "/" and the browser scrolls to the hash.
  */
 export default function Navbar() {
   const pathname = usePathname();
@@ -23,19 +23,19 @@ export default function Navbar() {
     e: React.MouseEvent<HTMLAnchorElement>,
     href: string
   ) => {
-    if (!isHome || !href.startsWith("/#")) return;
+    if (!href.startsWith("/#")) return;
     const id = href.replace("/#", "");
-    const target = document.getElementById(id);
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: "smooth" });
+
+    if (isHome) {
+      const target = document.getElementById(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
-  const isActive = (id: string, href: string) => {
-    if (href.startsWith("/#")) return isHome && activeSection === id;
-    return pathname === href;
-  };
+  const isActive = (id: string) => isHome && activeSection === id;
 
   return (
     <div className={styles.navwrap}>
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link
               key={link.id}
               href={link.href}
-              className={cn("tab", isActive(link.id, link.href) && "active")}
+              className={cn("tab", isActive(link.id) && "active")}
               onClick={(e) => handleAnchorClick(e, link.href)}
             >
               {link.label}

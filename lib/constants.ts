@@ -1,9 +1,9 @@
 export const NAV_LINKS = [
-  { id: "about", label: "About", href: "/about" },
+  { id: "about", label: "About", href: "/#about" },
   { id: "skills", label: "Skills", href: "/#skills" },
   { id: "resume", label: "Resume", href: "/#resume" },
-  { id: "projects", label: "Projects", href: "/projects" },
-  { id: "contact", label: "Contact", href: "/contact" },
+  { id: "projects", label: "Projects", href: "/#projects" },
+  { id: "contact", label: "Contact", href: "/#contact" },
 ] as const;
 
 export const SITE = {
