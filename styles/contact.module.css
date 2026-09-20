@@ -1,0 +1,33 @@
+.window :global(.window-body) {
+  padding: 30px 28px 34px;
+  font-family: var(--font-mono);
+  font-size: 14.5px;
+}
+
+.comment {
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+.key {
+  color: var(--cyan);
+}
+.value {
+  color: var(--text);
+}
+.value:hover {
+  color: var(--amber);
+}
+
+.ctas {
+  margin-top: 22px;
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}

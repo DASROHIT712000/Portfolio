@@ -1,0 +1,53 @@
+.window :global(.window-body) {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 30px 30px;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--cyan-dim);
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(79, 209, 197, 0.25);
+}
+
+.text {
+  flex: 1 1 320px;
+  min-width: 240px;
+}
+.text h3 {
+  font-family: var(--font-mono);
+  font-size: 17px;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+.text p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .window :global(.window-body) {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

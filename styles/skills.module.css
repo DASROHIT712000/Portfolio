@@ -1,0 +1,70 @@
+.groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 760px) {
+  .groups {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.cardHead {
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--text-dim);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cardHead::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--cyan);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 14.5px;
+}
+.item:last-child {
+  border-bottom: none;
+}
+
+.barWrap {
+  width: 70px;
+  height: 5px;
+  background: var(--border);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.bar {
+  height: 100%;
+  background: var(--cyan);
+  border-radius: 3px;
+}
+.itemLearning .bar {
+  background: var(--amber);
+}
+.tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--amber);
+  border: 1px solid var(--amber);
+  padding: 1px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
