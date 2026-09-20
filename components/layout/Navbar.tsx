@@ -40,7 +40,9 @@ export default function Navbar() {
   return (
     <div className={styles.navwrap}>
       <nav className={styles.navpill}>
-        <div className={styles.brand}>{SITE.domain}</div>
+        <Link href="/" className={styles.brand}>
+          {SITE.domain}
+        </Link>
         <div className={styles.navlinks}>
           {NAV_LINKS.map((link) => (
             <Link
